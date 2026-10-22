@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Poppins', Arial, sans-serif;
+    color: #26332e;
+    background: #f5f4ef;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 28px;
+}
+.auth-layout {
+    width: 100%;
+    max-width: 1000px;
+    min-height: 590px;
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    background: #fff;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 18px 55px rgba(31, 53, 43, .12);
+}
+.brand-panel {
+    padding: 52px 42px;
+    background: #254b3c;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+}
+.brand-panel:after {
+    content: "";
+    position: absolute;
+    width: 300px; height: 300px;
+    border: 1px solid rgba(255,255,255,.16);
+    border-radius: 50%;
+    right: -130px; bottom: -100px;
+    box-shadow: 0 0 0 35px rgba(255,255,255,.035), 0 0 0 70px rgba(255,255,255,.025);
+}
+.brand { font-size: 24px; font-weight: 700; letter-spacing: 4px; }
+.brand span { color: #d9c49a; }
+.brand-copy { position: relative; z-index: 1; }
+.brand-copy .eyebrow { color: #d9c49a; text-transform: uppercase; letter-spacing: 3px; font-size: 11px; font-weight: 600; }
+.brand-copy h1 { font-size: clamp(30px, 4vw, 43px); line-height: 1.2; margin: 15px 0; font-weight: 600; }
+.brand-copy p { max-width: 310px; color: #d9e3dc; font-size: 14px; line-height: 1.8; }
+.brand-foot { font-size: 11px; letter-spacing: 1.4px; color: #d9e3dc; position: relative; z-index: 1; }
+.form-panel { padding: 48px clamp(28px, 5vw, 64px); display: flex; flex-direction: column; justify-content: center; }
+.form-panel h2 { margin: 0 0 8px; font-size: 28px; color: #263d33; }
+.subtitle { margin: 0 0 28px; font-size: 13px; line-height: 1.6; color: #7d8781; }
+.form-group { margin-bottom: 17px; }
+label { display: block; font-size: 12px; font-weight: 600; margin-bottom: 7px; color: #45574d; }
+input { width: 100%; padding: 13px 14px; border: 1px solid #dce3dd; border-radius: 9px; outline: none; font: inherit; font-size: 13px; background: #fcfdfb; }
+input:focus { border-color: #477d62; box-shadow: 0 0 0 3px rgba(71,125,98,.1); }
+.submit-btn { width: 100%; border: 0; border-radius: 9px; padding: 14px; margin-top: 5px; background: #254b3c; color: white; font: inherit; font-size: 13px; font-weight: 600; cursor: pointer; transition: .2s; }
+.submit-btn:hover { background: #19392c; }
+.switch-link { margin-top: 22px; text-align: center; color: #7d8781; font-size: 12px; }
+a { color: #32664e; text-decoration: none; font-weight: 600; }
+a:hover { text-decoration: underline; }
+.message { padding: 11px 13px; margin-bottom: 17px; border-radius: 8px; font-size: 12px; line-height: 1.5; }
+.error { background: #fff0ee; color: #a33a2e; border: 1px solid #f5d1cc; }
+.success { background: #edf8f0; color: #24683c; border: 1px solid #cde9d4; }
+@media (max-width: 700px) {
+    body { padding: 12px; align-items: flex-start; }
+    .auth-layout { grid-template-columns: 1fr; max-width: 440px; }
+    .brand-panel { min-height: 220px; padding: 28px; }
+    .brand-copy h1 { font-size: 28px; }
+    .brand-copy p { margin-bottom: 0; }
+    .brand-foot { margin-top: 25px; }
+    .form-panel { padding: 32px 26px; }
+}

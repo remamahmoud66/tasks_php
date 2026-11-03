@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Users</title><link rel="stylesheet" href="assets/css/style.css"></head>
+<body><main class="container">
+<nav><a href="index.html">Home</a> · <a href="products.html">Products</a> · <a href="categories.html">Categories</a></nav>
+<h1>Users</h1>
+<section class="panel"><h2 id="form-title">Add user</h2>
+<form id="user-form"><input type="hidden" id="user-id">
+<label>Name <input id="name" required maxlength="100"></label>
+<label>Email <input id="email" type="email" required maxlength="255"></label>
+<label>Password <input id="password" type="password" minlength="8" autocomplete="new-password"><small>Required for a new user. Leave blank when editing to keep the current password.</small></label>
+<div class="actions"><button type="submit">Save user</button><button type="button" class="secondary" id="cancel-edit">Clear / Cancel edit</button></div></form>
+<p id="form-message" class="message" aria-live="polite"></p></section>
+<h2>User list</h2><p id="list-message" class="message" aria-live="polite"></p>
+<div class="table-wrap"><table><thead><tr><th>ID</th><th>Name</th><th>Email</th><th>Actions</th></tr></thead><tbody id="users-body"></tbody></table></div>
+</main><script src="assets/js/api.js"></script><script src="assets/js/users.js"></script></body></html>
